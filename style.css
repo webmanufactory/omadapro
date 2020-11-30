@@ -53,8 +53,10 @@
     vertical-align: top;
   }
 .container {
-    max-width: 1440px;
+    max-width: 1280px;
     margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 .error {
     margin-top: 10rem;
@@ -512,4 +514,339 @@
     .main-form__input {
         width: 100%;
     }
+}
+
+.subscribe__title {
+    margin-bottom: 15px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1.15;
+    text-align: center;
+    color: #1D6E87;
+}
+.subscribe__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.subscribe__form div {
+    margin-bottom: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
+.subscribe__email {
+    margin-right: 25px;
+    padding: 10px;
+    padding-right: 0;
+    min-width: 455px;
+    border: 6px solid #1D6E87;
+    border-radius: 6px;
+}
+.subscribe__email::-webkit-input-placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #808080;
+}
+.subscribe__email::-moz-placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #808080;
+}
+.subscribe__email:-ms-input-placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #808080;
+}
+.subscribe__email::-ms-input-placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #808080;
+}
+.subscribe__email::placeholder {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #808080;
+}
+.subscribe__form button {
+    padding: 10px 55px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+    color: #FFFFFF;
+    background: #333333;
+    border-radius: 6px;
+}
+.subscribe__checkbox {
+    margin-right: 15px;
+    vertical-align: middle;
+}
+.subscribe__checkbox-text {
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    color: #333333;
+    z-index: 1;
+}
+.reviews {
+    margin-bottom: 20px;
+}
+.reviews__title {
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 1.15;
+    color: #1D6E87;
+}
+.reviews__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.reviews__card {
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-bottom: 40px;
+    padding: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 30%;
+            flex: 0 0 30%;
+    background-color: #FAFAFA;
+    border-radius: 20px;
+}
+.card-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 10px;
+}
+.card-top__image {
+    margin-right: 20px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 20%;
+            flex: 0 0 20%;
+}
+.card-top__image img {
+    width: 100%;
+    height: auto;
+}
+.rate__title {
+    margin-bottom: 5px;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 13px;
+    line-height: 1.1;
+    color: #1D6E87;
+}
+.rate__wrap {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+}
+
+.rate__star:not(:last-child) {
+    margin-right: 0.2rem;
+}
+.rate__star[data-item-value="5"] {
+    fill: #4E4E4E;
+}
+.rate__star[data-item-value="4"],
+.rate__star[data-item-value="3"],
+.rate__star[data-item-value="2"],
+.rate__star[data-item-value="1"] {
+    fill: #FFEA06;
+}
+.card-body {
+    margin-bottom: 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.card-body__user-name {
+    margin-bottom: 15px;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 1.1;
+    color: #1D6E87;
+}
+.card-body__text {
+    margin-bottom: 5px;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.1;
+    color: #333333;
+}
+.card-body-btn {
+    text-align: right;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 1.1;
+    color: #1D6E87;
+    background-color: transparent;
+}
+.card-bottom__date {
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 14px;
+    color: #1D6E87;
+}
+.reviews-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.reviews-nav span {
+    display: inline-block;
+    font-family: 'Roboto-Regular', serif;
+    color: #ffffff;
+    text-align: center;
+    background: #1d6e87;
+    border-radius: 4px;
+    font-size: 17px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border: none;
+}
+.reviews__btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+}
+.reviews__btn button{
+    padding: 10px 40px;
+    font-size: 16px;
+    line-height: 1.25;
+    color: #888888;
+    background: #ffffff;
+    border: 1px solid #dad9d9;
+    border-radius: 4px;
+}
+.reviews__line {
+    padding-bottom: 40px;
+    position: relative;
+}
+.reviews__line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 8px;
+    width: 100%;
+    background: #1D6E87;
+    border-radius: 6px;
+}
+@media screen and (max-width: 1280px) {
+    .reviews__cards {
+        justify-content: space-evenly;
+    }
+    .reviews__card {
+        flex: 0 0 45%;
+    }
+}
+@media screen and (max-width: 1280px) {
+    .reviews__card {
+        flex: 0 0 40%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .reviews__card {
+        flex: 0 0 90%;
+    }
+    .subscribe {
+        padding: 15px;
+    }
+    .subscribe__email {
+        margin-right: 0;
+        margin-bottom: 15px;
+        min-width: 100%;
+    }
+    .subscribe__form div {
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 425px) {
+    .subscribe__title {
+        text-align: left;
+    }
+}
+@media screen and (max-width: 360px) {
+
 }
