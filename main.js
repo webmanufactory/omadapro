@@ -1,6 +1,16 @@
 $(document).ready(function(){
+    let cardText = $('.card-body__text');
+    let readMore = $('.card-body-btn');
     let reviewsCarousel = $(".reviews__cards");
     let reviewsButton = $(".reviews__btn");
+
+    readMore.click(function(e){
+        e.preventDefault();
+        let text = $(this).siblings(cardText);
+        $(this).hide();
+        text.css({'height': 'initial', 'overflow': 'initial', 'white-space': 'initial'});
+    })
+
     reviewsCarousel.owlCarousel({
         loop: true,
         items: 3,

@@ -671,6 +671,7 @@
             flex: 0 0 30%;
     background-color: #FAFAFA;
     border-radius: 20px;
+    overflow: hidden;
 }
 .card-top {
     display: -webkit-box;
@@ -743,6 +744,9 @@
     font-size: 12px;
     line-height: 1.1;
     color: #333333;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .card-body-btn {
     text-align: right;
