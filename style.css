@@ -937,13 +937,22 @@
     }   
 }
 @media screen and (max-width: 480px) {
+    .element-item {
+        width: 100%;
+    }
     .brand__letter,
     .brand__letter ul {
         display: flex;
+        flex-wrap: ;
         flex-direction: column;
         align-items: center;
     }
-    .element-item {
-        width: 100%;
+    .brand__link:link, 
+    .brand__link:visited, 
+    .brand__link:focus, 
+    .brand__link:hover {
+        text-transform: uppercase;
+        text-align: center;
+        display: inline-block;
     }
 }
