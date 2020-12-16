@@ -50,5 +50,35 @@ $(document).ready(function(){
              }, 10);
              return false; 
     });
-  });
 
+    $('.russian-brands').hide();
+      $('.russian__wrap').hide();
+
+      $('.show-rus').click(function(){
+          $('.english-brands').toggle();
+          $('.russian-brands').toggle();
+          $('.russian__wrap').toggle();
+          $('.english__wrap').toggle();
+      });
+
+      $('.show-eng').click(function(){
+        $('.russian-brands').toggle();
+        $('.english-brands').toggle();
+        $('.russian__wrap').toggle();
+        $('.english__wrap').toggle();
+      });
+
+    var $grid = $('.grid').isotope({
+        itemSelector: '.element-item',
+        layoutMode: 'fitRows',
+        transitionDuration: 0,
+        percentPosition: true
+      });
+      var filterFns = {};
+      $('.filters-button-group').on( 'click', 'button', function() {
+        var filterValue = $( this ).attr('data-filter');
+        filterValue = filterFns[ filterValue ] || filterValue;
+        $grid.isotope({ filter: filterValue });
+      });
+
+  });

@@ -515,7 +515,7 @@
         width: 100%;
     }
 }
-
+/* верстка от 06.12.2020 */
 .subscribe__title {
     margin-bottom: 15px;
     font-style: normal;
@@ -625,6 +625,7 @@
     color: #333333;
     z-index: 1;
 }
+
 .reviews {
     margin-bottom: 20px;
 }
@@ -698,28 +699,7 @@
     line-height: 1.1;
     color: #1D6E87;
 }
-.rate__wrap {
-    display: -webkit-inline-box;
-    display: -ms-inline-flexbox;
-    display: inline-flex;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: row-reverse;
-            flex-direction: row-reverse;
-}
 
-.rate__star:not(:last-child) {
-    margin-right: 0.2rem;
-}
-.rate__star[data-item-value="5"] {
-    fill: #4E4E4E;
-}
-.rate__star[data-item-value="4"],
-.rate__star[data-item-value="3"],
-.rate__star[data-item-value="2"],
-.rate__star[data-item-value="1"] {
-    fill: #FFEA06;
-}
 .card-body {
     margin-bottom: 10px;
     display: -webkit-box;
@@ -762,27 +742,7 @@
     line-height: 14px;
     color: #1D6E87;
 }
-.reviews-nav {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
-    font-size: 32px;
-    margin-bottom: 20px;
-}
-.reviews-nav span {
-    display: inline-block;
-    font-family: 'Roboto-Regular', serif;
-    color: #ffffff;
-    text-align: center;
-    background: #1d6e87;
-    border-radius: 4px;
-    font-size: 17px;
-    padding: 8px 16px;
-    cursor: pointer;
-    border: none;
-}
+
 .reviews__btn {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -853,4 +813,137 @@
 }
 @media screen and (max-width: 360px) {
 
+}
+
+
+.rate__wrap {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+}
+
+.rate__star:not(:last-child) {
+    margin-right: 0.2rem;
+}
+.rate__star[data-item-value="5"] {
+    fill: #4E4E4E;
+}
+.rate__star[data-item-value="4"],
+.rate__star[data-item-value="3"],
+.rate__star[data-item-value="2"],
+.rate__star[data-item-value="1"] {
+    fill: #FFEA06;
+}
+.reviews-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.reviews-nav span {
+    display: inline-block;
+    font-family: 'Roboto-Regular', serif;
+    color: #ffffff;
+    text-align: center;
+    background: #1d6e87;
+    border-radius: 4px;
+    font-size: 17px;
+    padding: 8px 16px;
+    cursor: pointer;
+    border: none;
+}
+.brands {
+    padding-top: 30px;
+}
+.brands__title {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+    color: #333333;
+    text-align: center;
+}
+.brands__letters {
+    margin-bottom: 20px;
+    padding-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.letter__btn {
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;
+    line-height: 1.2;
+    background-color: transparent;
+    color: #1D6E87;
+}
+.brands__letters li:not(:last-child) {
+    margin-right: 30px;
+}
+.letter__link:link,
+.letter__link:visited,
+.letter__link:focus,
+.letter__link:hover {
+    text-transform: uppercase;
+    color: inherit;
+}
+/* .brands__wrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.letter__wrap {
+    margin-bottom: 25px;
+    flex: 0 0 25%;
+} */
+.brand__letter {
+    font-family: 'Roboto', sans-serif;
+    font-size: 48px;
+    line-height: 1.5;
+    color: #1D6E87;
+}
+.brand__item {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.3;
+    color: #454545;
+}
+.brand__link:link,
+.brand__link:visited,
+.brand__link:focus,
+.brand__link:hover {
+    color: inherit;
+}
+.element-item {
+    padding: 10px;
+    width: 25%;
+}
+@media screen and (max-width: 992px) {
+    .element-item {
+        width: 33.33334%;
+    }   
+}
+@media screen and (max-width: 768px) {
+    .element-item {
+        width: 50%;
+    }   
+}
+@media screen and (max-width: 480px) {
+    .brand__letter,
+    .brand__letter ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .element-item {
+        width: 100%;
+    }
 }
