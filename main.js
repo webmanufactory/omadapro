@@ -95,4 +95,13 @@ $(document).ready(function(){
             tooltipHeader.innerHTML = "Нажать для копирования";
         });
 
+        if  ($(window).width() < 767) {
+            $(".contact-page__footer").slideUp();
+
+            $(".contact-body__btn").click(function(e){
+                e.preventDefault();
+                $(this).toggleClass("contact-body__btn-active");
+                $(".contact-page__footer").slideToggle();
+            })
+        }
   });
