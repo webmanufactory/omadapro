@@ -81,4 +81,18 @@ $(document).ready(function(){
         $grid.isotope({ filter: filterValue });
       });
 
+        let copyLinkHeader = document.getElementById("copy__linkHeader");
+        let tooltipHeader = document.getElementById("TooltipHeader");
+        let copyTextHeader = document.getElementById("copy__inputHeader");
+        
+        copyLinkHeader.addEventListener('click', function (event) {
+            event.preventDefault();
+            copyTextHeader.select();
+            document.execCommand("copy");
+            tooltipHeader.innerHTML = "Скопированно: " + copyTextHeader.value;
+        });
+        copyLinkHeader.addEventListener('mouseout', function (event) {
+            tooltipHeader.innerHTML = "Нажать для копирования";
+        });
+
   });
