@@ -1430,7 +1430,7 @@
     .conditions-header__photo {
         margin-right: 40px;
     }
-    .conditions-body__menu {
+    .conditions-body__items {
         justify-content: space-around;
     }
     .conditions-body__item {
@@ -1445,6 +1445,9 @@
         text-align: center;
     }
     .conditions-body__menu {
+        position: relative;
+    }
+    .conditions-body__items {
         justify-content: space-between;
     }
     .conditions-body__item {
