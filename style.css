@@ -1324,3 +1324,131 @@
         text-align: center;
     }
 }
+
+
+.conditions-header__wrap {
+    background: #1D6E87;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+.conditions-header {
+    padding-top: 10px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+.conditions-header__photo {
+    margin-right: 150px;
+    max-width: 240px;
+}
+.conditions-header__photo-img {
+    width: 100%;
+    height: auto;
+}
+.conditions-header__text {
+    align-self: center;
+}
+.conditions-header__title {
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.2;
+    color: inherit;
+}
+.conditions-body__wrap {
+}
+.conditions-body__title {
+    margin: 0;
+    margin-bottom: 15px;
+    font-size: 18px;
+    line-height: 1.2;
+    text-align: center;
+    color: #1D6E87;
+}
+.conditions-body__menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.line {
+    position: relative;
+}
+.line::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 8px;
+    width: 100%;
+    background: #1D6E87;
+    border-radius: 6px;
+}
+.conditions-body__item {
+    margin-bottom: 1%;
+    flex: 0 0 19%;
+    color: #fff;
+}
+.conditions-body__link {
+    padding: 20px 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 50px;
+    font-size: 9px;
+    line-height: 1.2;
+    text-align: center;
+    color: inherit;
+    background: #1D6E87;
+    border-radius: 15px;
+}
+.conditions-body__link:hover,
+.conditions-body__link:focus {
+    text-decoration: underline;
+    color: inherit;
+}
+.conditions-body__list {
+    padding-top: 50px;
+    font-size: 14px;
+    line-height: 1.2;
+}
+.conditions-body__list {
+    margin-block-end: 0;
+}
+.conditions-list__title {
+    margin-left: 15px;
+}
+.conditions-list__text {
+    margin-left: -15px;
+    
+}
+.conditions-list__text > li {
+    margin-bottom: 15px;
+}
+@media screen and (max-width: 992px) {
+    .conditions-header__photo {
+        margin-right: 40px;
+    }
+    .conditions-body__menu {
+        justify-content: space-around;
+    }
+    .conditions-body__item {
+        flex: 0 0 24%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .conditions-header__photo {
+        display: none;
+    }
+    .conditions-header__title {
+        text-align: center;
+    }
+    .conditions-body__menu {
+        justify-content: space-between;
+    }
+    .conditions-body__item {
+        flex: 0 0 49%;
+    }
+    .conditions-body__list {
+        padding-top: 15px;
+    }
+}
