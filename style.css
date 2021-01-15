@@ -1358,22 +1358,17 @@
 }
 .conditions-body__title {
     margin: 0;
-    margin-bottom: 15px;
     font-size: 18px;
     line-height: 1.2;
     text-align: center;
     color: #1D6E87;
 }
 .conditions-body__menu {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
 }
-.line {
-    position: relative;
-}
-.line::after {
+.conditions-body__menu::after {
     content: "";
     position: absolute;
     left: 0;
@@ -1382,6 +1377,13 @@
     width: 100%;
     background: #1D6E87;
     border-radius: 6px;
+}
+.conditions-body__items {
+    padding: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 .conditions-body__item {
     margin-bottom: 1%;
