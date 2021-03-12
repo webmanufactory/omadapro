@@ -1,4 +1,5 @@
 $(document).ready(function(){
+    
     let cardText = $('.card-body__text');
     let readMore = $('.card-body-btn');
     let reviewsCarousel = $(".reviews__cards");
@@ -80,7 +81,7 @@ $(document).ready(function(){
         filterValue = filterFns[ filterValue ] || filterValue;
         $grid.isotope({ filter: filterValue });
       });
-
+      
         let copyLinkHeader = document.getElementById("copy__linkHeader");
         let tooltipHeader = document.getElementById("TooltipHeader");
         let copyTextHeader = document.getElementById("copy__inputHeader");
@@ -104,4 +105,21 @@ $(document).ready(function(){
                 $(".contact-page__footer").slideToggle();
             })
         }
+        
+        let certificatesBtn = $('.certificates-body__btn');
+        let certificatesGalleryOmada = $('.certificates-gallery__omada');
+        let certificatesGalleryProduct = $('.certificates-gallery__product');
+        certificatesGalleryProduct.hide();
+
+        certificatesBtn.click(function(){
+            certificatesBtn.removeClass('certificates-body__btn--active');
+            $(this).addClass('certificates-body__btn--active');
+            if ($(this).data('gallery') == 'omada') {
+                certificatesGalleryProduct.hide(200);
+                certificatesGalleryOmada.show(200);
+            } else if ($(this).data('gallery') == 'product') {
+                certificatesGalleryOmada.hide(200);
+                certificatesGalleryProduct.show(200);
+            }
+        });
   });
