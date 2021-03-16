@@ -115,11 +115,28 @@ $(document).ready(function(){
             certificatesBtn.removeClass('certificates-body__btn--active');
             $(this).addClass('certificates-body__btn--active');
             if ($(this).data('gallery') == 'omada') {
-                certificatesGalleryProduct.hide(200);
-                certificatesGalleryOmada.show(200);
+                certificatesGalleryProduct.hide();
+                certificatesGalleryOmada.show();
             } else if ($(this).data('gallery') == 'product') {
-                certificatesGalleryOmada.hide(200);
-                certificatesGalleryProduct.show(200);
+                certificatesGalleryOmada.hide();
+                certificatesGalleryProduct.show();
+            }
+        });
+        
+        let serviceBtn = $('.service-tab__btn');
+        let serviceItemOne = $('.service-bottom__item-one');
+        let serviceItemTwo = $('.service-bottom__item-two');
+        serviceItemTwo.hide();
+
+        serviceBtn.click(function(){
+            serviceBtn.removeClass('service-tab__btn--active');
+            $(this).addClass('service-tab__btn--active');
+            if ($(this).data('service') == 'technomark') {
+                serviceItemTwo.hide();
+                serviceItemOne.show();
+            } else if ($(this).data('service') == 'trumpf') {
+                serviceItemOne.hide();
+                serviceItemTwo.show();
             }
         });
   });
