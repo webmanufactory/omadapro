@@ -2293,6 +2293,136 @@
             </div>
         </div>
     </section>
+    <section class="all-reviews">
+        <div class="all-reviews-header__wrap">
+            <div class="container">
+                <div class="all-reviews-header">
+                    <div class="all-reviews-header__photo">
+                        <img src="img/reviews_photo.png" alt="" class="all-reviews-header__photo-img">
+                    </div>
+                    <div class="all-reviews-header__text">
+                        <h2 class="all-reviews-header__title">Все отзывы в одном месте, специально для вас!</h2>
+                        <button class="all-reviews-header__btn">Оставить отзыв о компании ОМАДАПРО</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="all-reviews__body">
+            <div class="container">
+                <div class="all-reviews__tabs">
+                    <ul class="tab-header">
+                        <li class="tab-header__item tab-trigger active" data-tab="1">Отзывы о нас</li>
+                        <li class="tab-header__item tab-trigger" data-tab="2">Благодарственные письма</li>
+                        <li class="tab-header__item tab-trigger" data-tab="3">Отзывы в ЯндексМаркете</li>
+                        <li class="tab-header__item tab-trigger" data-tab="4">Отзывы о товарах на сайте</li>
+                        <li class="tab-header__item tab-trigger" data-tab="5">Отзывы в VK</li>
+                    </ul>
+                    <ul class="tab-content">
+                        <li class="tab-content__item tab-content active" data-tab="1">
+                            
+                        </li>
+                        <li class="tab-content__item tab-content" data-tab="2">
+                            <div class="tab-top">
+                                <h3 class="tab__review-title">Всего писем: <span class="tab__review-count">71</span></h3>
+                                <p class="tab__review-text">Только честные благодарственные письма от наших партнеров</p>
+                            </div>
+                            <div class="tab-bottom">
+                                <div class="row">
+                                    <div class="col-md-4 col-xs-12">
+                                        <a href="#" class="tab-letter__link">
+                                            <div class="tab-letter__image">
+                                                <img src="img/bless_postcard.png" alt="" class="tab-letter__img">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12">
+                                        <a href="#" class="tab-letter__link">
+                                            <div class="tab-letter__image">
+                                                <img src="img/bless_postcard.png" alt="" class="tab-letter__img">
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col-md-4 col-xs-12">
+                                        <a href="#" class="tab-letter__link">
+                                            <div class="tab-letter__image">
+                                                <img src="img/bless_postcard.png" alt="" class="tab-letter__img">
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="tab-content__item tab-content" data-tab="3">
+                            <div class="yandex-reviews">
+                                <img src="img/yandex-reviews.png" alt="" class="yandex-reviews__img">
+                            </div>
+                        </li>
+                        <li class="tab-content__item tab-content" data-tab="4">
+                            <div class="tab-top">
+                                <h3 class="tab__review-title">Всего отзывов: <span class="tab__review-count">1234</span></h3>
+                                <p class="tab__review-text">Только честные отзывы настоящих покупателей</p>
+                                <div class="card-top__rate">
+                                    <a class="rate__title" href="{$review.product_url}">{$review.product_name|escape}</a>
+                                    <div class="h6">
+                                        <!-- <span>{if $review.title}{$review.title}{/if}</span> -->
+                                        {if !$review.parent_id && !empty($review.rate)}
+                                        {$rate = round($review.rate)}
+                                        {$wa->shop->ratingHtml($rate, 16)}
+                                        {/if}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-bottom">
+                                {foreach $reviews as $review}
+                                <div class="tab-bottom__card">
+                                    <div class="card-top">
+                                        <div class="card-top__image">
+                                            <a href="{$review.product_url}">
+                                                {if $review.product_url_crop_small}
+                                                    <img src="{$review.product_url_crop_small|replace:'48x48':'400'}" alt="{$review.product_name|escape}" title="{$review.product_name|escape}">
+                                                {else}
+                                                    <img src="{$wa_theme_url}img/no-foto.gif" alt="{$review.product_name|escape}" title="{$review.product_name|escape}">
+                                                {/if}
+                                            </a>
+                                        </div>
+                                        <div class="card-top__rate">
+                                            <a class="rate__title" href="{$review.product_url}">{$review.product_name|escape}</a>
+                                            <div class="h6">
+                                                <!-- <span>{if $review.title}{$review.title}{/if}</span> -->
+                                                {if !$review.parent_id && !empty($review.rate)}
+                                                {$rate = round($review.rate)}
+                                                {$wa->shop->ratingHtml($rate, 16)}
+                                                {/if}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="card-body">
+                                        <p class="card-body__user-name">{$review.author.name}</p>
+                                        {if $review.text}<p class="card-body__text">{$review.text}</p>{/if}
+                                        <span class="card-body__btn-open card-body__btn">читать полностью</span>
+                                        <span class="card-body__btn-close card-body__btn">скрыть</span>
+                                    </div>
+                                    <div class="card-bottom">
+                                        <span class="card-bottom__date">{$review.datetime|wa_datetime:"humandatetime"}</span>
+                                    </div>
+                                </div>
+                                {/foreach}
+                            </div>
+                        </li>
+                        <li class="tab-content__item tab-content" data-tab="5">
+                            <div class="tab-top">
+                                <h3 class="tab__review-title">Всего писем: <span class="tab__review-count">71</span></h3>
+                                <p class="tab__review-text">Только честные благодарственные письма от наших партнеров</p>
+                            </div>
+                            <div class="tab-bottom">
+                                <img src="img/vk-reviews.png" alt="" class="vk-reviews__img">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
     <footer class="footer">
         <div class="footer__top container">
             <div class="footer__submenu">
