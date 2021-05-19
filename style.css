@@ -3250,6 +3250,7 @@ h4, h5, h6 {
 }
 
 .comment-form__name {
+    margin-bottom: 10px;
     padding: 10px 18px;
     min-width: 50%;
     font-size: 24px;
@@ -3271,7 +3272,7 @@ h4, h5, h6 {
 }
 
 .comment-form__text {
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     font-weight: 500;
     font-size: 24px;
     color: #FFFFFF;
