@@ -86,15 +86,15 @@ $(document).ready(function(){
         let tooltipHeader = document.getElementById("TooltipHeader");
         let copyTextHeader = document.getElementById("copy__inputHeader");
         
-        copyLinkHeader.addEventListener('click', function (event) {
-            event.preventDefault();
-            copyTextHeader.select();
-            document.execCommand("copy");
-            tooltipHeader.innerHTML = "Скопированно: " + copyTextHeader.value;
-        });
-        copyLinkHeader.addEventListener('mouseout', function (event) {
-            tooltipHeader.innerHTML = "Нажать для копирования";
-        });
+        // copyLinkHeader.addEventListener('click', function (event) {
+        //     event.preventDefault();
+        //     copyTextHeader.select();
+        //     document.execCommand("copy");
+        //     tooltipHeader.innerHTML = "Скопированно: " + copyTextHeader.value;
+        // });
+        // copyLinkHeader.addEventListener('mouseout', function (event) {
+        //     tooltipHeader.innerHTML = "Нажать для копирования";
+        // });
 
         if  ($(window).width() < 767) {
             $(".contact-page__footer").slideUp();
@@ -150,4 +150,25 @@ $(document).ready(function(){
             $('.tab-content.active').removeClass('active');
             content.addClass('active');
          });
+
+         let blogBtnCategory = $('.blog-tab__btn-category');
+         let blogBtnCalendar = $('.blog-tab__btn-calendar');
+         let blogLinksLink = $('.blog-links__link');
+
+        blogBtnCategory.click(function(e){
+            e.preventDefault();
+            $('.blog-tab__btn-icon').toggleClass('active');
+            $('.blog-top__category').toggleClass('active');
+        });
+
+        blogBtnCalendar.click(function(e){
+            e.preventDefault();
+            $('.blog-tab__calendar').toggleClass('active');
+        });
+
+        blogLinksLink.click(function(e){
+            e.preventDefault();
+            blogLinksLink.removeClass('active');
+            $(this).addClass('active');
+        });
   });
