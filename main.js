@@ -151,9 +151,9 @@ $(document).ready(function(){
             content.addClass('active');
          });
 
-         let blogBtnCategory = $('.blog-tab__btn-category');
-         let blogBtnCalendar = $('.blog-tab__btn-calendar');
-         let blogLinksLink = $('.blog-links__link');
+        let blogBtnCategory = $('.blog-tab__btn-category');
+        let blogBtnCalendar = $('.blog-tab__btn-calendar');
+        let blogLinksLink = $('.blog-links__link');
 
         blogBtnCategory.click(function(e){
             e.preventDefault();

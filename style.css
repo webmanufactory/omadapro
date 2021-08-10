@@ -3033,7 +3033,6 @@ h4, h5, h6 {
     background: #EDEDED;
     border-radius: 6px;
 }
-
 .menu-v {
     display: flex;
     align-items: center;
@@ -3216,7 +3215,9 @@ h4, h5, h6 {
     font-weight: 500;
     font-size: 20px;
 }
-
+.comment-page {
+    margin-bottom: 60px;
+}
 .comment-page__title {
     font-weight: bold;
     font-size: 24px;
@@ -3405,12 +3406,6 @@ h4, h5, h6 {
     .blog-calendar__img {
         min-width: 230px;
     }
-    .blog-links {
-        flex-direction: column;
-    }
-    .blog-links__item:first-child {
-        margin-bottom: 10px;
-    }
     .post-footer__title {
         font-size: 14px;
     }
@@ -3464,5 +3459,201 @@ h4, h5, h6 {
     }
     .blog-tab__btn-hide {
         display: none;
+    }
+}
+
+.auth-form {
+    margin-bottom: 60px;
+}
+.auth-form__title {
+    margin-top: 0;
+    margin-bottom: 70px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 1.3;
+    color: #000000;
+}
+.auth-form__text {
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #000000;
+    margin-bottom: 60px;
+}
+.auth-form__link {
+    color: #1D6E87;
+}
+.auth-form__socials {
+    margin-bottom: 30px;
+}
+.auth-form__socials-text {
+    margin-bottom: 30px;
+    font-size: 16px;
+    line-height: 1.3;
+    color: #000000;
+    opacity: 0.2;
+}
+.auth-form__socials-items {
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.auth-form__social-item {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.auth-form__social-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: red;
+    border-radius: 50%;
+}
+.wa-form {
+    margin-bottom: 80px;
+}
+.wa-form__label {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    line-height: 1.3;
+    color: rgba(0, 0, 0, 0.8);
+}
+.wa-form__label:not(:last-child) {
+    margin-bottom: 60px;
+}
+.wa-form__input {
+    padding: 20px 0 10px;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 1.3;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+}
+.wa-form__input::placeholder {
+    color: rgba(0, 0, 0, 0.3);
+}
+.wa-form__capcha {
+    margin-bottom: 60px;
+}
+.wa-form__capcha--img {
+    max-width: 345px;
+    width: 100%;
+    height: auto;
+}
+.wa-form__conditions {
+    margin-bottom: 60px;
+    display: flex;
+}
+.wa-form__checkbox[type=checkbox] {
+    margin-top: 0;
+    margin-right: 20px;
+    width: 30px;
+    height: 30px;
+}
+.wa-form__checkbox:checked {
+    background: #000;
+}
+.wa-form__checkbox-label {
+    margin-top: 0;
+    font-size: 20px;
+    line-height: 1.3;
+    color: rgba(0, 0, 0, 0.8);
+}
+.wa-form__conditions-link {
+    color: #1D6E87;
+    text-decoration: none;
+}
+.wa-form__conditions-link:hover,
+.wa-form__conditions-link:focus {
+    color: #1D6E87;
+    text-decoration: none;
+}
+.wa-form__btn {
+    padding: 10px 40px;
+    min-width: 220px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    background: #1D6E87;
+    border-radius: 8px;
+}
+.thank-you {
+    margin-bottom: 60px;
+}
+.thank-you__image {
+    margin-bottom: 30px;
+    text-align: center;
+}
+.thank-you__img {
+}
+.thank-you__title {
+    font-weight: 300;
+    font-size: 32px;
+    line-height: 1.3;
+    text-align: center;
+    color: #000000;
+}
+.thank-you__title-bottom {
+    margin-bottom: 60px;
+}
+.thank-you__icon-wrap {
+    margin-bottom: 25px;
+    text-align: center;
+}
+.thank-you__icon {
+}
+.thank-you__text {
+    margin-bottom: 70px;
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 1.3;
+    text-align: center;
+    color: #000000;
+}
+.thank-you__buttons {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.thank-you__btn {
+    padding: 20px;
+    width: 100%;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1.3;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+    background: #FFFFFF;
+    border: 2px solid rgba(72, 127, 143, 0.64);
+    border-radius: 8px;
+}
+.thank-you__btn:first-child {
+    margin-bottom: 12px;
+    color: #FFFFFF;
+    background: #1D6E87;
+}
+@media screen and (max-width: 768px) {
+    .wa-form__button {
+        text-align: center;
+    }
+    .wa-form__btn {
+        min-width: 160px;
+    }
+    .auth-form__social-item {
+        flex-basis: 33.3333%;
+    }
+    .auth-form__social-icon {
+        width: 52px;
+        height: 52px;
     }
 }
