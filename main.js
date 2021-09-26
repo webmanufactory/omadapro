@@ -265,4 +265,35 @@ $(document).ready(function () {
         $(this).siblings('.faq-item .faq-item__body').slideToggle();
         $(this).children('.faq-header__button').toggleClass('active');
     })
+
+    let catalogueCards = $('.catalogue__cards');
+    let cardSize = $('.catalogue__cards > .row > div');
+
+    function changeType() {
+        if (catalogueCards.hasClass('large')) {
+            cardSize.removeClass();
+            cardSize.addClass('col-xs-6 col-md-4');
+        } else {
+            cardSize.removeClass();
+            cardSize.addClass('col-xs-12');
+        }
+    }
+    $('.showtype a').on('click', function (e) {
+        e.preventDefault();
+        let filterType = $(this).attr('data-list');
+        catalogueCards.removeClass();
+        $('.showtype a').removeClass('active');
+        $(this).addClass('active');
+        catalogueCards.addClass('catalogue__cards');
+        catalogueCards.addClass(filterType);
+        changeType();
+    })
+    changeType();
+
+    if (window.matchMedia('(max-width: 991px)').matches) {
+        $('.filter-img').slideUp()
+        $('.filter-show__btn').on('click', function () {
+            $('.filter-img').slideToggle()
+        })
+    }
 });
