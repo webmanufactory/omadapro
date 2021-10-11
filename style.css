@@ -5672,14 +5672,20 @@ h4, h5, h6 {
         margin-bottom: 5px;
     }
 }
-
 .catalogue__cards.large .catalogue__card {
     padding: 10px;
     border-radius: 8px;
 }
+.catalogue__cards.large .catalogue-card__compare {
+    display: none;
+}
 .catalogue__cards.large .catalogue__card:hover {
     position: absolute;
     box-shadow: 0px 7px 46px rgba(0, 0, 0, 0.25);
+}
+.catalogue__cards.large .catalogue__card:hover .catalogue-card__compare {
+    right: 10px;
+    display: flex;
 }
 .catalogue__cards.large .catalogue__card:hover .product-gallery__feature {
     display: block;
