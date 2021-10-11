@@ -5128,10 +5128,16 @@ h4, h5, h6 {
     margin-bottom: 30px;
     padding-top: 15px;
 }
+.catalogue__card-wrap {
+    position: relative;
+}
 .catalogue__card {
     margin-bottom: 15px;
-    position: relative; 
     overflow: hidden;
+    background-color: #fff;
+}
+.catalogue__card:hover {
+    z-index: 2;
 }
 .catalogue-gallery__img {
     width: 100%;
@@ -5174,7 +5180,7 @@ h4, h5, h6 {
     color: rgba(0, 0, 0, 0.56);
 }
 .catalogue__card:hover .catalogue-card__compare {
-    right: 0;
+    right: 10px;
 }
 .catalogue-card__compare {
     position: absolute;
@@ -5665,4 +5671,16 @@ h4, h5, h6 {
     .catalogue__cards.justify .catalogue-price__button {
         margin-bottom: 5px;
     }
+}
+
+.catalogue__cards.large .catalogue__card {
+    padding: 10px;
+    border-radius: 8px;
+}
+.catalogue__cards.large .catalogue__card:hover {
+    position: absolute;
+    box-shadow: 0px 7px 46px rgba(0, 0, 0, 0.25);
+}
+.catalogue__cards.large .catalogue__card:hover .product-gallery__feature {
+    display: block;
 }
