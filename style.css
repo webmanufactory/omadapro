@@ -5277,7 +5277,7 @@ h4, h5, h6 {
 .catalogue__cards.list .catalogue-card__compare{
     min-width: 100px;
     top: 45px;
-    right: 0;
+    right: 20px;
     flex-direction: row;
     align-items: flex-start;
     justify-content: space-between;
@@ -5309,6 +5309,7 @@ h4, h5, h6 {
     display: none;
 }
 .catalogue__cards.justify .catalogue__card{
+    margin-bottom: 45px;
     display: flex;
 }
 .catalogue__cards.justify .catalogue-card__feature {
@@ -5333,9 +5334,6 @@ h4, h5, h6 {
 }
 .catalogue__cards.justify .catalogue-compare__like {
     margin-bottom: 0;
-}
-.catalogue__cards.justify .catalogue-card__body{
-    padding-top: 45px;
 }
 .catalogue__cards.justify .catalogue-card__title {
     margin: 0;
@@ -5672,16 +5670,18 @@ h4, h5, h6 {
         margin-bottom: 5px;
     }
 }
-.catalogue__cards.large .catalogue__card {
+.catalogue__card {
     padding: 10px;
     border-radius: 8px;
 }
 .catalogue__cards.large .catalogue-card__compare {
     display: none;
 }
+.catalogue__card:hover {
+    box-shadow: 0px 7px 46px rgba(0, 0, 0, 0.25);
+}
 .catalogue__cards.large .catalogue__card:hover {
     position: absolute;
-    box-shadow: 0px 7px 46px rgba(0, 0, 0, 0.25);
 }
 .catalogue__cards.large .catalogue__card:hover .catalogue-card__compare {
     right: 10px;
